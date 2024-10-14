@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjan Chandra Paudel</title>
-    <link rel="icon" href="anjan_pic1.JPG" type="image/jpg">
+    <link rel="icon" href="anjan_aipic.jpg" type="image/jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -57,30 +57,41 @@
 
         .navbar {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
             background-color: var(--primary-color);
             padding: 1em;
+            position: relative;
         }
 
         .navbar-left {
             display: flex;
-            justify-content: flex-start;
+            align-items: center;
         }
 
-        .navbar a {
+        .nav-title {
+            margin-right: 1.5em;
+            color: var(--text-color-dark);
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .nav-links {
+            display: none;
+        }
+
+        .nav-links a {
             color: var(--text-color-dark);
             text-decoration: none;
             padding: 0.5em 1em;
             transition: color 0.3s;
         }
 
-        .navbar a:hover {
+        .nav-links a:hover {
             color: var(--accent-color);
         }
 
-        .navbar .theme-switch {
+        .theme-switch {
             cursor: pointer;
             background-color: var(--text-color);
             padding: 0.5em 1em;
@@ -91,9 +102,18 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        .navbar .theme-switch:hover {
+        .theme-switch:hover {
             background-color: var(--accent-color);
             color: var(--text-color-dark);
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            color: var(--text-color-dark);
+            cursor: pointer;
+            display: none;
         }
 
         .left-section {
@@ -325,26 +345,42 @@
         }
 
         @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
+            .hamburger {
+                display: block;
             }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+            }
+
+            .nav-links.show {
+                display: flex;
+                flex-direction: column;
+
+            }
+
 
             .navbar-left {
-                flex-direction: column;
+                justify-content: space-between;
                 width: 100%;
             }
 
-            .navbar a {
-                padding: 10px;
-                width: 100%;
+            .nav-title {
+                flex-grow: 1;
                 text-align: center;
             }
 
             .theme-switch {
-                width: 100%;
-                text-align: center;
-                margin-top: 0.5em;
+                order: 3;
             }
+
 
             .left-section,
             .right-section,
@@ -370,6 +406,23 @@
                 padding: 1em 1em;
             }
         }
+
+        /* Adjust for larger screens */
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            .navbar-left {
+                flex: 1;
+                display: flex;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 
@@ -377,17 +430,26 @@
 
     <!-- Navbar -->
     <nav class="navbar">
+        <button class="hamburger" id="hamburger" onclick="toggleNavbar()">
+            &#9776;
+        </button>
         <div class="navbar-left">
-            <a href="#home">Anjan Chandra Paudel</a>
-            <a href="#experience">Experience</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#services">Service</a>
+            <a href="/" class="nav-title">Anjan Chandra Paudel</a>
+            <div class="nav-links" id="navLinks">
+                <a href="#experience">Experience</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#services">Service</a>
+                <!-- <p>I am good man</p> -->
+            </div>
         </div>
         <button class="theme-switch" onclick="toggleTheme()">
             <i class="fas fa-sun" id="themeIcon"></i>
         </button>
+
     </nav>
+
+
 
     <!-- Home Section -->
     <section id="home" class="home" style="display: flex;">
@@ -633,6 +695,12 @@
         function closeModal() {
             document.getElementById('citationModal').style.display = "none";
         }
+
+        function toggleNavbar() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('show');
+        }
+
     </script>
 </body>
 
