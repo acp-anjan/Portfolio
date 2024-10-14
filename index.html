@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anjan Chandra Paudel - Software Engineer</title>
+    <title>Anjan Chandra Paudel</title>
     <link rel="icon" href="anjan_pic1.JPG" type="image/jpg">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -56,15 +57,22 @@
 
         .navbar {
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             justify-content: space-between;
             background-color: var(--primary-color);
             padding: 1em;
         }
 
+        .navbar-left {
+            display: flex;
+            justify-content: flex-start;
+        }
+
         .navbar a {
             color: var(--text-color-dark);
             text-decoration: none;
-            padding: 0.5em;
+            padding: 0.5em 1em;
             transition: color 0.3s;
         }
 
@@ -317,6 +325,26 @@
         }
 
         @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar-left {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .navbar a {
+                padding: 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .theme-switch {
+                width: 100%;
+                text-align: center;
+                margin-top: 0.5em;
+            }
 
             .left-section,
             .right-section,
@@ -351,12 +379,9 @@
     <nav class="navbar">
         <div class="navbar-left">
             <a href="#home">Anjan Chandra Paudel</a>
-            <a href="#home">Home</a>
             <a href="#experience">Experience</a>
             <a href="#achievements">Achievements</a>
             <a href="#certifications">Certifications</a>
-            <!-- <a href="#publications">Publications</a> -->
-            <!-- <a href="#teaching">Teaching</a> -->
             <a href="#services">Service</a>
         </div>
         <button class="theme-switch" onclick="toggleTheme()">
@@ -386,7 +411,7 @@
                 experience in the software development industry, I have primarily focused on US-based healthcare
                 software, having previously worked with Cotiviti Inc. and Cedar Gate Technologies. I hold a
                 Bachelor's degree in Computer Engineering from the Institute of Engineering, Pashchimanchal Campus.</p>
-            <a href="your_cv.pdf" download>Download My CV</a>
+            <a href="Anjan_Chandra_Paudel_CV.pdf" download>Download My CV</a>
             <h3>News</h3>
             <p>Excited to announce that I am joining Infinite Computer Solutions.</p>
             <h3>Academics</h3>
