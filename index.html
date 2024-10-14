@@ -4,225 +4,347 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anjan Chandra Paudel - Software Engineer</title>
+    <link rel="icon" href="anjan_pic1.JPG" type="image/jpg">
 
-    <!-- Font Awesome Icons and Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- CSS Styles -->
     <style>
         :root {
-    --primary-color-light: #2ecc71; /* Bright green */
-    --primary-color-dark: #27ae60; /* Darker green */
-    --text-color-light: #2c3e50; /* Dark blue-gray for better contrast in light mode */
-    --text-color-dark: #ecf0f1; /* Light gray for dark mode */
-    --background-light: #f5f5f5; /* Light gray background */
-    --background-dark: #34495e; /* Dark blue-gray background for dark mode */
-    --card-background-light: #ffffff; /* White background for cards in light mode */
-    --card-background-dark: #2c3e50; /* Darker blue-gray background for cards in dark mode */
-    --accent-color-light: #3498db; /* Light blue accent */
-    --accent-color-dark: #e74c3c; /* Red accent for dark mode */
-}
+            --primary-color-light: #32cd32;
+            --primary-color-dark: #228b22;
+            --text-color-light: #2c3e50;
+            --text-color-dark: #ecf0f1;
+            --background-light: #f5f5f5;
+            --background-dark: #34495e;
+            --card-background-light: #ffffff;
+            --card-background-dark: #2c3e50;
+            --accent-color-light: #3498db;
+            --accent-color-dark: #e74c3c;
+        }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--background-light);
-    color: var(--text-color-light);
-    margin: 0;
-    transition: background-color 0.3s, color 0.3s;
-}
+        body {
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-light);
+            color: var(--text-color-light);
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-[data-theme="dark"] {
-    --primary-color: var(--primary-color-dark);
-    --background-color: var(--background-dark);
-    --text-color: var(--text-color-dark);
-    --card-background: var(--card-background-dark);
-    --accent-color: var(--accent-color-dark);
-}
+        [data-theme="dark"] {
+            --primary-color: var(--primary-color-dark);
+            --background-color: var(--background-dark);
+            --text-color: var(--text-color-dark);
+            --card-background: var(--card-background-dark);
+            --accent-color: var(--accent-color-dark);
+        }
 
-[data-theme="light"] {
-    --primary-color: var(--primary-color-light);
-    --background-color: var(--background-light);
-    --text-color: var(--text-color-light);
-    --card-background: var(--card-background-light);
-    --accent-color: var(--accent-color-light);
-}
+        [data-theme="light"] {
+            --primary-color: var(--primary-color-light);
+            --background-color: var(--background-light);
+            --text-color: var(--text-color-light);
+            --card-background: var(--card-background-light);
+            --accent-color: var(--accent-color-light);
+        }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    padding: 1em;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--primary-color);
+            padding: 1em;
+        }
 
-.navbar a {
-    color: var(--text-color-dark);
-    text-decoration: none;
-    padding: 0.5em;
-    transition: color 0.3s;
-}
+        .navbar a {
+            color: var(--text-color-dark);
+            text-decoration: none;
+            padding: 0.5em;
+            transition: color 0.3s;
+        }
 
-.navbar a:hover {
-    color: var(--accent-color);
-}
+        .navbar a:hover {
+            color: var(--accent-color);
+        }
 
-.navbar .theme-switch {
-    cursor: pointer;
-    background-color: var(--text-color);
-    padding: 0.5em 1em;
-    color: var(--primary-color);
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2em;
-    transition: background-color 0.3s, color 0.3s;
-}
+        .navbar .theme-switch {
+            cursor: pointer;
+            background-color: var(--text-color);
+            padding: 0.5em 1em;
+            color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-.navbar .theme-switch:hover {
-    background-color: var(--accent-color);
-    color: var(--text-color-dark);
-}
+        .navbar .theme-switch:hover {
+            background-color: var(--accent-color);
+            color: var(--text-color-dark);
+        }
 
-.left-section {
-    width: 30%;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+        .left-section {
+            width: 30%;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
 
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    /* object-fit: cover; */
-    border: 5px solid var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 5px solid var(--primary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.left-section h2 {
-    font-size: 2em;
-    margin: 0.5em 0;
-    color: var(--primary-color);
-}
+        .left-section h2 {
+            font-size: 2em;
+            margin: 0.5em 0;
+            color: var(--primary-color);
+        }
 
-.left-section p {
-    font-size: 1.1em;
-    margin: 0.2em 0;
-}
+        .left-section p {
+            font-size: 1.1em;
+            margin: 0.2em 0;
+        }
 
-.social-icons a {
-    margin: 0 0.5em;
-    font-size: 1.5em;
-    color: var(--primary-color);
-    transition: color 0.3s;
-}
+        .social-icons a {
+            margin: 0 0.5em;
+            font-size: 1.5em;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
 
-.social-icons a:hover {
-    color: var(--accent-color);
-}
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
 
-.right-section {
-    width: 70%;
-    padding: 1em;
-}
+        .right-section {
+            width: 70%;
+            padding: 1em 1em 1em 2.5em;
+        }
 
-.right-section p {
-    margin: 1em 0;
-}
+        .right-section p {
+            margin: 1em 0;
+        }
 
-.right-section a {
-    display: inline-block;
-    padding: 0.5em 1em;
-    background-color: var(--primary-color);
-    color: var(--text-color-dark);
-    text-decoration: none;
-    margin: 1em 0;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+        .right-section a {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: var(--primary-color);
+            color: var(--text-color-dark);
+            text-decoration: none;
+            margin: 1em 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
 
-.right-section a:hover {
-    background-color: var(--accent-color);
-}
+        .right-section a:hover {
+            background-color: var(--accent-color);
+        }
 
-h1, h2, h3 {
-    color: var(--primary-color);
-}
+        h1,
+        h2,
+        h3 {
+            color: var(--primary-color);
+        }
 
-section {
-    display: flex;
-    padding: 2em 0;
-    border-bottom: 1px solid var(--primary-color);
-}
+        section {
+            display: flex;
+            padding: 2em 0;
+            border-bottom: 1px solid var(--primary-color);
+        }
 
-.section-left {
-    width: 30%;
-    text-align: left;
-    font-size: 1.5em;
-    padding: 1em;
-}
+        .section-left {
+            width: 30%;
+            text-align: left;
+            font-size: 1.5em;
+            padding: 1em;
+        }
 
-.section-right {
-    width: 70%;
-    padding: 1em;
-}
+        .section-right {
+            width: 70%;
+            padding: 1em;
+        }
 
-.section-title {
-    font-size: 1.5em;
-    color: var(--primary-color);
-}
+        .section-title {
+            font-size: 1.5em;
+            color: var(--primary-color);
+        }
 
-.experience .card, .achievements .card {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2em;
-    padding: 1.5em;
-    background-color: var(--card-background);
-    color: var(--text-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
 
-.experience .card:hover, .achievements .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
+        .card {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2em;
+            padding: 1.5em;
+            background-color: var(--card-background);
+            color: var(--text-color);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
 
-.experience .card img {
-    width: 50px;
-    height: 50px;
-    margin-right: 1.5em;
-    border-radius: 50%;
-}
+        .experience .card img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            border-radius: 8px;
+            padding: 5px;
+            background-color: var(--card-background-light);
+        }
 
-@media (max-width: 768px) {
-    .left-section, .right-section, .section-left, .section-right {
-        width: 100%;
-    }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    section {
-        flex-direction: column;
-    }
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 1em;
+        }
 
-    .section-left {
-        text-align: center;
-        padding: 1em 0;
-    }
+        .card-content {
+            display: flex;
+            flex-direction: column;
+        }
 
-    .section-right {
-        padding: 1em 0;
-    }
-}
+        .card-title {
+            font-size: 1.5em;
+            margin: 0.2em 0;
+            color: var(--primary-color);
+        }
+
+        .card-subtitle {
+            font-size: 1.2em;
+            margin: 0.2em 0;
+        }
+
+        .card-timeperiod,
+        .location,
+        .card-description {
+            margin: 0.2em 0;
+            font-size: 1em;
+        }
+
+        .publications .publication {
+            margin-bottom: 1.5em;
+            padding: 1em;
+        }
+
+        .publications .publication h3 {
+            margin: 0.5em 0;
+            color: var(--primary-color);
+        }
+
+        .publications .description {
+            margin: 0.5em 0;
+        }
+
+        .publications .buttons {
+            display: flex;
+            gap: 0.5em;
+        }
+
+        .publications .btn {
+            padding: 0.5em 1em;
+            background-color: var(--primary-color);
+            color: var(--text-color-dark);
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .publications .btn:hover {
+            background-color: var(--accent-color);
+        }
+
+
+        .services .service {
+            margin-bottom: 1.5em;
+            padding: 1em;
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        .services .service h3 {
+            margin: 0.5em 0;
+            color: var(--primary-color);
+        }
+
+        .services .service .time-period {
+            font-style: italic;
+            margin: 0.2em 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: var(--background-color);
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid var(--primary-color);
+            width: 50%;
+        }
+
+        .modal .close {
+            color: var(--primary-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+
+            .left-section,
+            .right-section,
+            .section-left,
+            .section-right {
+                width: 100%;
+            }
+
+            section {
+                flex-direction: column;
+            }
+
+            .section-left {
+                text-align: center;
+                padding: 1em 0;
+            }
+
+            .section-right {
+                padding: 1em 1em;
+            }
+
+            .right-section {
+                padding: 1em 1em;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -232,9 +354,10 @@ section {
             <a href="#home">Home</a>
             <a href="#experience">Experience</a>
             <a href="#achievements">Achievements</a>
-            <a href="#publications">Publications</a>
-            <a href="#teaching">Teaching</a>
-            <a href="#service">Service</a>
+            <a href="#certifications">Certifications</a>
+            <!-- <a href="#publications">Publications</a> -->
+            <!-- <a href="#teaching">Teaching</a> -->
+            <a href="#services">Service</a>
         </div>
         <button class="theme-switch" onclick="toggleTheme()">
             <i class="fas fa-sun" id="themeIcon"></i>
@@ -249,14 +372,20 @@ section {
             <p>Software Engineer</p>
             <p>Infinite Computer Solutions</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:devacpanjan@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/acpanjan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/acp-anjan" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/ChandraAnjan" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
         <div class="right-section">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sollicitudin ipsum non ligula aliquet, sed vestibulum quam congue. Suspendisse eget ex in elit mollis cursus sit amet sit amet tortor. Fusce efficitur eget nunc sed convallis.</p>
+            <h3>Biography</h3>
+            <p>
+                I am a Software Engineer at Infinite Computer Solutions (Infinite Nepal), working in the
+                Research and Development department since February 2024. With over five years of hands-on
+                experience in the software development industry, I have primarily focused on US-based healthcare
+                software, having previously worked with Cotiviti Inc. and Cedar Gate Technologies. I hold a
+                Bachelor's degree in Computer Engineering from the Institute of Engineering, Pashchimanchal Campus.</p>
             <a href="your_cv.pdf" download>Download My CV</a>
             <h3>News</h3>
             <p>Excited to announce that I am joining Infinite Computer Solutions.</p>
@@ -272,24 +401,45 @@ section {
         </div>
         <div class="section-right">
             <div class="card">
-                <img src="infinite-logo.png" alt="Infinite Logo">
-                <div>
-                    <h3>Infinite Computer Solutions</h3>
-                    <p>Software Engineer | Kathmandu, Nepal | 2024-Present</p>
+                <img src="infinite-logo.png" alt="Infinite Logo" class="company-logo">
+                <div class="card-content">
+                    <h3 class="card-title">Infinite Computer Solutions</h3>
+                    <p class="card-subtitle">Software Engineer</p>
+                    <p class="card-timeperiod">Feb, 2024 - Present | Kathmandu, Nepal</p>
+                    <p class="card-description">I work on developing software solutions for clients in the healthcare
+                        domain.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="cotiviti-logo.jpg" alt="Cotiviti Logo">
-                <div>
-                    <h3>Cotiviti Nepal</h3>
-                    <p>Software Engineer | Kathmandu, Nepal | 2022-2024</p>
+                <div class="card-content">
+                    <h3 class="card-title">Cotiviti Nepal</h3>
+                    <p class="card-subtitle">Software Engineer</p>
+                    <p class="card-timeperiod">Jan, 2023 - Jan, 2024 | Kathmandu, Nepal</p>
+                    <p class="card-description">Worked for the integration of security scan tools like Veracode and
+                        Sonar cube.</p>
                 </div>
             </div>
             <div class="card">
                 <img src="cedargate-logo.jpg" alt="Cedargate Logo">
-                <div>
-                    <h3>Cedargate Technologies</h3>
-                    <p>Software Engineer | Kathmandu, Nepal | 2022-2024</p>
+                <div class="card-content">
+                    <h3 class="card-title">Cedar Gate Technologies</h3>
+                    <p class="card-subtitle">Software Engineer </p>
+                    <p class="card-timeperiod">Jul, 2021 - Jan, 2023 | Sanepa, Nepal</p>
+                    <p class="card-description">Led team for upgrading tech stack of legacy applicaiton and automate
+                        devlopment process to streamline.</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src="company-logo.png" alt="Lambda Logo">
+                <div class="card-content">
+                    <h3 class="card-title">Lambda Information Technologies</h3>
+                    <p class="card-subtitle">Software Developer </p>
+                    <p class="card-timeperiod">Jun, 2019 - Jun, 2021 | Pokhara, Nepal</p>
+                    <p class="card-description">Developed and maintained business automation tools and billing
+                        softwares.</p>
+
                 </div>
             </div>
         </div>
@@ -302,34 +452,163 @@ section {
         </div>
         <div class="section-right">
             <div class="card">
-                <h3>First Place - Cotiviti Hackathon</h3>
-                <p>Won first place in a hackathon organized by Cotiviti using a machine learning application.</p>
+                <div class="card-content">
+                    <h3 class="card-title">Hackathon by Cotiviti, 2023</h3>
+                    <p class="card-subtitle">Secured First Position</p>
+                    <p class="card-timeperiod">Dec 2023 | Kathmandu, Nepal</p>
+                    <p class="card-description">Developed a POC for solving problem using NLP integration in one of
+                        healthcare application.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="section-left">
+            <h2 class="section-title">Certifications</h2>
+        </div>
+        <div class="section-right">
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Machine Learning A-Z: AI, Python & R + ChatGPT Prize [2024]</h3>
+                    <p class="card-subtitle">Issued By: Udemy</p>
+                    <p class="card-timeperiod">Apr 2024</p>
+                </div>
             </div>
             <div class="card">
-                <h3>Certifications</h3>
-                <p>Completed various certifications in cybersecurity and software development.</p>
+                <div class="card-content">
+                    <h3 class="card-title">Certified SAFe® 6 Practitioner</h3>
+                    <p class="card-subtitle">Issued By: Scaled Agile Inc</p>
+                    <p class="card-timeperiod">Mar 2024</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">C# (Basic)</h3>
+                    <p class="card-subtitle">Issued By: Hackerrank</p>
+                    <p class="card-timeperiod">Oct 2022</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3 class="card-title">Microsoft Office Specialist: Word 2013</h3>
+                    <p class="card-subtitle">Issued By: Microsoft</p>
+                    <p class="card-timeperiod">Jun 2016</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="publications">
+    <!-- <section id="publications" class="publications">
         <div class="section-left">
             <h2 class="section-title">Publications</h2>
         </div>
         <div class="section-right">
-            <p>No publications yet.</p>
+            <div class="publication">
+                <h3>Paper Title 1</h3>
+                <p class="description">A brief description of Paper Title 1. It covers various aspects of...</p>
+                <div class="buttons">
+                    <a href="link-to-paper-1" class="btn">View Paper</a>
+                    <a href="link-to-github-1" class="btn">GitHub Code</a>
+                    <button class="btn" onclick="openModal()">Cite</button>
+                </div>
+            </div>
+            <div class="publication">
+                <h3>Paper Title 2</h3>
+                <p class="description">A brief description of Paper Title 2. It explores the topic of...</p>
+                <div class="buttons">
+                    <a href="link-to-paper-2" class="btn">View Paper</a>
+                    <a href="link-to-github-2" class="btn">GitHub Code</a>
+                    <button class="btn" onclick="openModal()">Cite</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <section id="services" class="services">
+        <div class="section-left">
+            <h2 class="section-title">Service</h2>
+        </div>
+        <div class="section-right">
+            <div class="service">
+                <h3>Volunteer, Pink Walk by Cotiviti</h3>
+                <p class="time-period">October 2023</p>
+                <!-- <p>I took part in the event to support cancer awareness and fundraising.</p> -->
+            </div>
+            <div class="service">
+                <h3>Treasurer, Innovative Computer Engineering Students' Society</h3>
+                <p class="time-period">July 2018 - July 2019</p>
+                <!-- <p>I managed financial records and assisted in budgeting for society events.</p> -->
+            </div>
+            <div class="service">
+                <h3>Organizer, Human Aid Hackathon at Pashchimanchal Campus</h3>
+                <p class="time-period">2018</p>
+                <!-- <p>I helped coordinate logistics and ensured the smooth running of the event.</p> -->
+            </div>
+            <div class="service">
+                <h3>Executive Member, Innovative Computer Engineering Students' Society</h3>
+                <p class="time-period">July 2017 - July 2018</p>
+                <!-- <p>I participated in organizing events and engaging with members.</p> -->
+            </div>
         </div>
     </section>
+    <!-- Modal for Citation -->
+    <div id="citationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Author, A., & Coauthor, B. (2022). Title of the paper. Journal Name, 10(2), 100-110. DOI: XXXX/XXXXXX</p>
+        </div>
+    </div>
 
     <script>
+
+        function detectColorScheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return 'dark';
+            }
+            return 'light';
+        }
+
+        function setTheme(theme) {
+            document.body.dataset.theme = theme;
+            localStorage.setItem('theme', theme);
+            updateThemeIcon(theme);
+        }
+
+        function updateThemeIcon(theme) {
+            const themeIcon = document.getElementById('themeIcon');
+            if (themeIcon) {
+                themeIcon.classList.remove('fa-sun', 'fa-moon');
+                themeIcon.classList.add(theme === 'dark' ? 'fa-sun' : 'fa-moon');
+            }
+        }
+
         function toggleTheme() {
-            const currentTheme = document.body.dataset.theme;
-            const newTheme = currentTheme === "dark" ? "light" : "dark";
-            document.body.dataset.theme = newTheme;
-            document.getElementById('themeIcon').classList.toggle('fa-sun');
-            document.getElementById('themeIcon').classList.toggle('fa-moon');
+            const currentTheme = document.body.dataset.theme || detectColorScheme();
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialTheme = detectColorScheme();
+            setTheme(initialTheme);
+        });
+
+        function openModal() {
+            document.getElementById('citationModal').style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById('citationModal').style.display = "none";
         }
     </script>
 </body>
+
 </html>
